@@ -10,7 +10,7 @@
   - current_user.employee.records.each do |r|
    .row.emp
     .col-md-4.col-xs-4
-     =r.created_at.beginning_of_day.strftime("%Y - %m - %d").to_s
+     =r.check_in.beginning_of_day.strftime("%Y - %m - %d").to_s
     .col-md-4.col-xs-4
      =r.check_in.to_formatted_s(:time)
     .col-md-4.col-xs-4
