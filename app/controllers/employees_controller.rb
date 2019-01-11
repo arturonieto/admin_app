@@ -6,8 +6,7 @@ before_action :verify_role, except: [:view]
   end
 
   def show
-      @user = User.find(params[:id])
-      @employee = @user.employee
+      @employee = Employee.find(params[:id])
       @records = @employee.records
   end
 

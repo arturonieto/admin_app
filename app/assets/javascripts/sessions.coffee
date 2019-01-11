@@ -7,9 +7,9 @@ $(document).ready ->
   setTimeout (->
     $('.fadeaway').fadeOut()
     return
-  ), 3000
+  ), 2300
   setTimeout (->
     $('.invalid_login').fadeOut()
     return
-  ), 3000
+  ), 2300
   return

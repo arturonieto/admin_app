@@ -17,6 +17,23 @@
 
     .row{
 
+      &.top{
+        margin-top: 1.4em;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: $small-title;
+        border-bottom: 1px solid $very-dark-blue;
+        margin-bottom: .5em;
+      }
+
+      &.emp{
+        text-align: center;
+        font-family: $text;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: $very-dark-blue;
+      }
+
       &.user{
 
         .col-md-8.col-xs-8{
@@ -35,6 +52,11 @@
               color: $very-dark-blue;
 
               span.fas.fa-user-edit{
+
+                &:hover .hover_text{
+                  visibility: visible;
+                  opacity: 1;
+                }
 
                 .hover_text{
                   font-family: $button;
@@ -64,11 +86,6 @@
                     border-style: solid;
                     border-color: $very-dark-blue transparent transparent transparent;
                   }
-                }
-
-                &:hover .hover_text{
-                  visibility: visible;
-                  opacity: 1;
                 }
               }
             }
@@ -120,29 +137,14 @@
                 opacity: 1;
               }
             }
+          }
         }
-      }
-    }
-
-      &.top{
-        margin-top: 1.4em;
-        text-align: center;
-        font-size: 1.2em;
-        font-family: $small-title;
-        border-bottom: 1px solid $very-dark-blue;
-        margin-bottom: .5em;
-      }
-
-      &.emp{
-        text-align: center;
-        font-family: $text;
-        font-weight: bold;
-        font-size: 1.2em;
-        color: $very-dark-blue;
       }
     }
   }
 }
+
+
 
 .employees_view{
   background-color: $light-grey;

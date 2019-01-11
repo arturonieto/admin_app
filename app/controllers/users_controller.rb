@@ -13,6 +13,8 @@ before_action :verify_role
 
   def create
     user = User.new(new_user_params)
+    user.id = User.maximum('id') + 1
+    user.employee.id = Employee.maximum('id') + 1
 
     if user.save!
       redirect_to index_path
@@ -23,8 +25,7 @@ before_action :verify_role
   end
 
   def edit
-    @employee = Employee.find(params[:id])
-    @user = User.find(@employee.user_id)
+    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       redirect_to '/'
     else
@@ -39,7 +40,7 @@ before_action :verify_role
   end
 
   def new_user_params
-    params.require(:user).permit(:id, :email, :password, :role, employee_attributes: [:id, :first_name, :last_name])
+    params.require(:user).permit(:email, :password, :role, employee_attributes: [:first_name, :last_name])
   end
 
 end
