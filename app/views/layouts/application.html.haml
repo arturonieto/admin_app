@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title AdminApp
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.6.3/css/all.css", :integrity => "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/", :rel => "stylesheet"}/
+    = stylesheet_link_tag href = "https://fonts.googleapis.com/css?family=Nunito|Dosis|Noto+Serif|Open+Sans+Condensed:300|Slabo+27px"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .container
+        -if current_user
+          .row
+            .col-md-8
+              .time-container
+                %h2
+                  %span.fas.fa-calendar-day= "&nbsp; &nbsp;".html_safe + Time.now.strftime("%Y - %m - %d")
+            .col-md-4
+              %p= current_user.email
+              %p= link_to 'Salir', logout_path, method: 'delete', class: 'logout'
+    = yield

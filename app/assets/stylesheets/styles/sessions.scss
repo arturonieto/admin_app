@@ -1,0 +1,153 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sessions_index{
+  background-color: $light-grey;
+
+  .container{
+    padding-top: 5em;
+    text-align: center;
+
+    p.invalid_login{
+      color: red;
+      margin-top: .5em;
+    }
+
+    .form{
+      margin: 0 auto;
+      padding-top: 3em;
+      border-radius: 10px;
+      background-color: $almost-white;
+      width: 400px;
+      height: 280px;
+      -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+
+      input{
+
+        &[type=email], &[type=password]{
+          width: 75%;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          border-radius: 3px;
+          border: none;
+        }
+
+        &[type=submit]{
+          width: 50%;
+          padding: 10px 20px;
+          font-family: $button;
+          font-weight: bold;
+          color: $very-dark-blue;
+          font-size: 1.2em;
+          transition: .5s;
+          border-radius: 5px;
+          margin-top: 20px;
+
+          &:hover{
+            transition: .5s;
+            color: white;
+            background-color: $very-dark-blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.sessions_show{
+  background-color: $light-grey;
+
+  .container{
+    padding-top: 1.5em;
+    background-color: $almost-white;
+    border-radius: 3px;
+    padding-bottom: 1.5em;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+
+    p.check_in, p.check_out{
+      color: $very-dark-blue;
+    }
+
+    h2{
+      color: $very-dark-blue;
+      font-family: $big-title;
+      padding-bottom: 1.5em;
+      border-bottom: 3px solid $very-dark-blue;
+    }
+
+    .row{
+      margin-bottom: .7em;
+
+      .col-md-6.col-xs-6{
+
+        a{
+          text-decoration: none;
+          color: $very-dark-blue;
+          font-size: 1.2em;
+
+          &:hover{
+            color: $medium-blue;
+          }
+        }
+      }
+
+      .col-md-3.col-xs-3{
+
+        input[type=submit]{
+          padding: 2px 10px;
+          font-family: $button;
+          font-weight: bold;
+          border-radius: 3px;
+          background-color: $very-dark-blue;
+          color: $almost-white;
+          border: none;
+          outline: none;
+
+          &:hover{
+            cursor: pointer;
+            text-decoration: none;
+          }
+
+          &:active{
+            background-color: green;
+          }
+        }
+      }
+
+      .col-md-12.col-xs-12{
+        padding-top: 2em;
+        text-align: right;
+
+        a{
+          width: 50%;
+          padding: 10px 20px;
+          font-family: $button;
+          font-weight: bold;
+          color: $very-dark-blue;
+          font-size: 1.2em;
+          transition: .5s;
+          border-radius: 5px;
+          margin-top: 20px;
+          background-color: $almost-white;
+          border: 1px solid $very-dark-blue;
+
+          &:hover{
+            transition: .5s;
+            color: $almost-white;
+            background-color: $very-dark-blue;
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

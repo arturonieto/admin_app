@@ -1,0 +1,24 @@
+.sessions_show
+ .container
+  %h2 Seleccione un empleado para visualizar bitácora
+  - @employees.each do |e|
+   .row
+    .col-md-6.col-xs-6
+     =link_to(e) do
+      %span.fas.fa-user
+      =' '+e.first_name+' '+e.last_name
+    .col-md-3.col-xs-3
+     = button_to 'Registrar Entrada', mark_checkin_employees_path(:id => e.id)
+    .col-md-3.col-xs-3
+     = button_to 'Registrar Salida', mark_checkout_employees_path(:id => e.id)
+  -if flash[:check_in]
+   .row.fadeaway
+    .col-md-12.col-xs-12
+     %p.check_in= flash[:check_in]
+  -if flash[:check_out]
+   .row.fadeaway
+    .col-md-12.col-xs-12
+     %p.check_out= flash[:check_out]
+  .row
+   .col-md-12.col-xs-12
+    = link_to 'Nuevo Empleado', {controller: 'users', action: 'new'}

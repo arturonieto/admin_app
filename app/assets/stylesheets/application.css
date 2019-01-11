@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require main
+ */
+
+body, html{
+  background-color: #D0D4DB;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  background-color: #D0D4DB;
+  padding-bottom: 2em;
+}
+
+.header .container{
+  background-color: #F1F1F5;
+  border-radius: 3px;
+  margin-top: 3px;
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+}
+
+
+.header h2{
+  font-family: 'Slabo 27px', serif;
+  color: #012B41;
+  margin-top: 1.2em;
+}
+
+.header p{
+  text-align: right;
+  margin-top: 1em;
+  font-family: 'Slabo 27px', serif;
+  color: #012B41;
+}
+
+.header p:first-child{
+  font-size: 1.5em;
+}
+
+.header p a{
+  background-color: #012B41;
+  padding: 5px 10px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #F1F1F5;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.header p a:hover{
+  transition: .5s;
+  color: #012B41;
+  background-color: #F1F1F5;
+  cursor: pointer;
+  text-decoration: none;
+}

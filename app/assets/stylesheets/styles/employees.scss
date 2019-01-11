@@ -1,0 +1,179 @@
+// Place all the styles related to the employees controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.employees_show{
+  background-color: $light-grey;
+
+  .container{
+    background-color: $almost-white;
+    border-radius: 3px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+
+    .row{
+
+      &.user{
+
+        .col-md-8.col-xs-8{
+
+          a{
+            background-color: transparent;
+            border: none;
+            outline: none;
+
+            &:hover{
+              cursor: pointer;
+              text-decoration: none;
+            }
+
+            h3{
+              color: $very-dark-blue;
+
+              span.fas.fa-user-edit{
+
+                .hover_text{
+                  font-family: $button;
+                  font-size: .4em;
+                  visibility: hidden;
+                  width: 120px;
+                  background-color: $very-dark-blue;
+                  color: $almost-white;
+                  text-align: center;
+                  padding: 5px 0;
+                  border-radius: 6px;
+                  position: absolute;
+                  z-index: 1;
+                  opacity: 0;
+                  transition: .5s;
+                  bottom: 110%;
+                  left: -12.1%;
+                  margin-left: 60px;
+
+                  &:after{
+                    content: " ";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: $very-dark-blue transparent transparent transparent;
+                  }
+                }
+
+                &:hover .hover_text{
+                  visibility: visible;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+
+        .col-md-4.col-xs-4{
+          text-align: right;
+
+          a{
+            font-size: 2.2em;
+            color: $very-dark-blue;
+            margin-top: 1.5em;
+
+            span.fas.fa-arrow-alt-circle-left{
+
+              .hover_text{
+                font-family: $button;
+                font-size: .4em;
+                visibility: hidden;
+                width: 120px;
+                background-color: $very-dark-blue;
+                color: $almost-white;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+                transition: .5s;
+                bottom: 100%;
+                left: 60%;
+                margin-left: 60px;
+
+                &:after{
+                  content: " ";
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: $very-dark-blue transparent transparent transparent;
+                }
+              }
+
+              &:hover .hover_text{
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+        }
+      }
+    }
+
+      &.top{
+        margin-top: 1.4em;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: $small-title;
+        border-bottom: 1px solid $very-dark-blue;
+        margin-bottom: .5em;
+      }
+
+      &.emp{
+        text-align: center;
+        font-family: $text;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: $very-dark-blue;
+      }
+    }
+  }
+}
+
+.employees_view{
+  background-color: $light-grey;
+
+  .container{
+    background-color: $almost-white;
+    border-radius: 3px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.75);
+
+    .row{
+
+      &.top{
+        margin-top: 1.4em;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: $small-title;
+        border-bottom: 1px solid $very-dark-blue;
+        margin-bottom: .5em;
+      }
+
+      &.emp{
+        text-align: center;
+        font-family: $text;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: $very-dark-blue;
+      }
+    }
+  }
+}

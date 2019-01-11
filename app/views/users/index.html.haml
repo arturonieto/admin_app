@@ -1,0 +1,12 @@
+.users_index
+ .container
+  .form
+   =form_for @user, :method => :post do |f|
+    = f.email_field :email
+    %br
+    = f.fields_for :employee do |e|
+     = e.text_field :first_name
+     %br     
+     = e.text_field :last_name
+    %br
+    = f.submit "Actualizar"

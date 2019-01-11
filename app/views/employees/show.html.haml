@@ -1,0 +1,29 @@
+.employees_show
+ .container
+  .row.user
+   .col-md-8.col-xs-8
+    =link_to edit_user_path(:id => @employee.id) do
+     %h3
+      %span.fas.fa-user-edit
+       %span.hover_text Editar Empleado
+      %span= "&nbsp; &nbsp;".html_safe + @employee.first_name+' '+@employee.last_name
+   .col-md-4.col-xs-4
+    =link_to index_path do
+     %span.fas.fa-arrow-alt-circle-left
+      %span.hover_text Regresar
+  .row.top
+   .col-md-4.col-xs-4
+    %p Fecha
+   .col-md-4.col-xs-4
+    %p Entrada
+   .col-md-4.col-xs-4
+    %p Salida
+  - @employee.records.each do |r|
+   .row.emp
+    .col-md-4.col-xs-4
+     =r.created_at.beginning_of_day.strftime("%Y - %m - %d").to_s
+    .col-md-4.col-xs-4
+     =r.check_in.to_formatted_s(:time)
+    .col-md-4.col-xs-4
+     - if r.check_out
+      =r.check_out.to_formatted_s(:time)

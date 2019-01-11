@@ -1,0 +1,18 @@
+.employees_view
+ .container
+  .row.top
+   .col-md-4.col-xs-4
+    %p Fecha
+   .col-md-4.col-xs-4
+    %p Entrada
+   .col-md-4.col-xs-4
+    %p Salida
+  - current_user.employee.records.each do |r|
+   .row.emp
+    .col-md-4.col-xs-4
+     =r.created_at.beginning_of_day.strftime("%Y - %m - %d").to_s
+    .col-md-4.col-xs-4
+     =r.check_in.to_formatted_s(:time)
+    .col-md-4.col-xs-4
+     - if r.check_out
+      =r.check_out.to_formatted_s(:time)
