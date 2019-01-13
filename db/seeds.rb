@@ -7,8 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(email: "admin@mail.com", password: "admin098", role: 2, id: 1)
-Admin.create(user_id: 1, first_name: "Administrador", last_name: "Único")
+
 
 User.create(email: "primer_empleado@mail.com", password: "12345", role: 1, id: 2)
 Employee.create(user_id: 2, first_name: "Rodrigo", last_name: "Velazquez", id: 1)
